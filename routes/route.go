@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 var e *echo.Echo
@@ -15,6 +16,8 @@ func New() *echo.Echo {
 
 	// File
 	e.File("/public", "./template/view/simple.html")
+
+	e.Use(middleware.Logger())
 
 	homeRoute()
 	userRoute()
