@@ -2,21 +2,16 @@ package routes
 
 import (
 	"github.com/labstack/echo/v4"
-	"golang-echo/handler"
-	"net/http"
 )
+
+var e *echo.Echo
 
 func New() *echo.Echo {
 	// Membuat objek echo
-	e := echo.New()
+	e = echo.New()
 
-	// Routing sederhana
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Halo, Selamat datang di Echo!")
-	})
-
-	user := e.Group("/user")
-	user.GET("", handler.GetUser)
+	homeRoute()
+	userRoute()
 
 	return e
 }
