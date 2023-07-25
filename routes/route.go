@@ -19,6 +19,9 @@ func New() *echo.Echo {
 	homeRoute()
 	userRoute()
 	cookieRoute()
+	Fileserver()
+	helloRoute()
+	queryRoute()
 	pathParameterRoute()
 
 	return e
