@@ -25,6 +25,7 @@ func New() *echo.Echo {
 	pathParameterRoute()
 	headerRoute()
 	downloadRoute()
+	redirectRoute()
 
 	return e
 }
