@@ -10,12 +10,19 @@ func New() *echo.Echo {
 	// Membuat objek echo
 	e = echo.New()
 
+	// Static
+	e.Static("/static", "./template")
+
+	// File
+	e.File("/public", "./template/view/simple.html")
+
 	homeRoute()
 	userRoute()
 	cookieRoute()
 	Fileserver()
 	helloRoute()
 	queryRoute()
+	pathParameterRoute()
 
 	return e
 }
