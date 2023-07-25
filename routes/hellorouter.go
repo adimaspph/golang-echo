@@ -7,7 +7,7 @@ import (
 )
 
 func helloRoute() {
-	e.GET("/", func(c echo.Context) error {
+	e.GET("/hello", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Halo, kalian")
 	})
 }

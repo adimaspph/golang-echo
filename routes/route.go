@@ -17,7 +17,9 @@ func New() *echo.Echo {
 	// File
 	e.File("/public", "./template/view/simple.html")
 
-	e.Use(middleware.Logger())
+	e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
+		Format: "method=${method}, uri=${uri}, status=${status}\n",
+	}))
 
 	homeRoute()
 	userRoute()
