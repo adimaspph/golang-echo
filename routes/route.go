@@ -12,6 +12,7 @@ func New() *echo.Echo {
 
 	homeRoute()
 	userRoute()
+	cookieRoute()
 
 	return e
 }
