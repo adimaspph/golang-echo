@@ -20,6 +20,7 @@ func New() *echo.Echo {
 	userRoute()
 	cookieRoute()
 	pathParameterRoute()
+	headerRoute()
 
 	return e
 }
