@@ -31,6 +31,7 @@ func New() *echo.Echo {
 	headerRoute()
 	downloadRoute()
 	redirectRoute()
+	middleRoute()
 
 	return e
 }
