@@ -1,9 +1,10 @@
 package routes
 
 import (
-	"github.com/labstack/echo/v4"
 	"golang-echo/handler"
 	"net/http"
+
+	"github.com/labstack/echo/v4"
 )
 
 func New() *echo.Echo {
@@ -16,7 +17,8 @@ func New() *echo.Echo {
 	})
 
 	user := e.Group("/user")
-	user.GET("", handler.GetUser)
+	user.GET("/", handler.GetUser)
+	user.POST("/", handler.AddUser)
 
 	return e
 }
