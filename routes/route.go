@@ -24,6 +24,7 @@ func New() *echo.Echo {
 	queryRoute()
 	pathParameterRoute()
 	headerRoute()
+	downloadRoute()
 
 	return e
 }
