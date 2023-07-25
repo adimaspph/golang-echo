@@ -23,6 +23,7 @@ func New() *echo.Echo {
 	helloRoute()
 	queryRoute()
 	pathParameterRoute()
+	headerRoute()
 
 	return e
 }
