@@ -3,5 +3,6 @@ package routes
 import "golang-echo/handler"
 
 func queryRoute() {
-	e.GET("/api/users", handler.GetUsersHandler)
+	// e.GET("/users", handler.GetUsersHandler)
+	e.GET("/users/:id", handler.GetUserHandlers)
 }
